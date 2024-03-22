@@ -3,10 +3,15 @@ public class Dozierender {
     private String name;
     private String fakultaet;
     private String bueronummer;
+
+    public Dozierender(String name, String fakultaet, String bueronummer) {
+        this.name = name;
+        this.fakultaet = fakultaet;
+        this.bueronummer = bueronummer;
+    }
     
-    public String frageBeantworten(String frage){
-        String antwort = frage.substring(1);
-        return antwort;
+    public void frageBeantworten(Studierender student, String frage){
+        System.out.println("Die Frage von" + student + " ist" + frage);
     }
 
 }
