@@ -14,5 +14,15 @@ public class Dozierender {
         System.out.println("Die Frage von" + student + " ist" + frage);
     }
 
+    public void studierenderHinzufuegen(Lehrveranstaltung lehrveranstaltung, Studierender studierender){
+        lehrveranstaltung.studentHinzufuegen(studierender);
+    }
+
+    public void studierenderEntfernen(Lehrveranstaltung lehrveranstaltung, Studierender studierender){
+        lehrveranstaltung.studentEntfernen(studierender);
+    }
+
+     
+
 }
 

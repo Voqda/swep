@@ -1,8 +1,5 @@
+public class Studierender{
 
-
-public class Studierender {
-
-    
     private String name;
     private int matrikelnummer;
     private String studiengang;
@@ -15,5 +12,17 @@ public class Studierender {
 
     public void frageStellen(Dozierender prof, String frage){
        prof.frageBeantworten(this, frage);
+    }
+
+    public void anmelden(Lehrveranstaltung lehrveranstaltung){
+        lehrveranstaltung.studentHinzufuegen(this);
+    }
+
+    public void abmelden(Lehrveranstaltung lehrveranstaltung){
+        lehrveranstaltung.studentEntfernen(this);
+    }
+
+    public void teilnehmen(Vorlesungsstunde vorlesungsstunde){
+        vorlesungsstunde.studentHinzufuegen(this);
     }
 }
