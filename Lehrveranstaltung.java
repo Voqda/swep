@@ -5,6 +5,8 @@ public class Lehrveranstaltung {
     private String titel;
     private List<Dozierender> dozierende;
     private List<Studierender> studierende;
+    private List<Praktikumsstunde> praktikumsstunden;
+    private List<Vorlesungsstunde> vorlesungsstunden;
 
 public Lehrveranstaltung(String titel){
     this.titel = titel; 
@@ -21,10 +23,35 @@ public void studentEntfernen(Studierender student){
     studierende.remove(student);
     System.out.println("Der Student" + student + "ist abgemeldet");
 }
+public void dozierendenHinzufuegen(Dozierender dozent){
+    dozierende.add(dozent);
+    System.out.println("Der Dozent" + dozent + "ist hinzugefügt");
+}
+
+public void dozierendenEntfernen(Dozierender dozent){
+    dozierende.remove(dozent);
+    System.out.println("Der Dozent" + dozent + "ist entfernt");
+}
 
 public void vorlesungsstundeHinzufuegen(Vorlesungsstunde vorlesungsstunde){
- // to be continued
+    vorlesungsstunden.add(vorlesungsstunde);
+    System.out.println("Die Vorlesungsstunde" + vorlesungsstunde + "ist hinzugefügt");
 }
+
+public void praktikumsstundeHinzufuegen(Praktikumsstunde praktikumsstunde){
+    praktikumsstunden.add(praktikumsstunde);
+    System.out.println("Die Praktikumsstunde" + praktikumsstunde + "ist hinzugefügt");
+}
+
+public void praktikumsstundeEntfernen(Praktikumsstunde praktikumsstunde){
+    praktikumsstunden.remove(praktikumsstunde);
+    System.out.println("Die Praktikumsstunde" + praktikumsstunde + "ist entfernt");
+}
+
+public void vorlesungsstundeEntfernen(Vorlesungsstunde vorlesungsstunde){
+    vorlesungsstunden.remove(vorlesungsstunde);
+    System.out.println("Die Vorlesungsstunde" + vorlesungsstunde + "ist entfernt");
+}   
 
 public List<Studierender> getStudierende(){
     return studierende;
